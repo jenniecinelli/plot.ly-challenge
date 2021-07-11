@@ -18,13 +18,18 @@
           <p>Use the interactive charts below to explore the dataset</p>
         </div>
       </div>
+      
       <br>
+
       <div class="row">
         <div class="col-md-12">
           <div class="well">
             <h5>Test Subject ID No.:</h5>
-            <!-- <select id="selDataset"></select> -->
-            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            <form>
+            <select id="selDataset" onchange="optionChanged(this.value)"> 
+              <option value="" disabled selected hidden>Please Choose...</option>
+            </select>
+          </form>
           </div>
         </div>
       </div>
@@ -39,11 +44,11 @@
           </div>
         </div>
 
-        <div class="col-md-7">
+        <div class="col-md-5">
           <div id="bar"></div>
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-4">
           <div id="guage"></div>
         </div>
       </div>

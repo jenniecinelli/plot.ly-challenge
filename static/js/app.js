@@ -84,3 +84,26 @@ function metaData(a) {
   });
 });   
 }
+
+function guageChart(a) {
+  d3.json("samples.json").then((data) => {
+    console.log(data);
+    var metadata = data.metadata.filter(function(meta) {
+      return meta.id.toString() === a;
+    });
+    
+    var data = [
+      {
+        domain: { x: [0, 1], y: [0, 1] },
+        value: metadata[0].wfreq,
+        title: { text: "Belly Button Washing Frequency<br><span style='font-size:0.8em;color:gray'>Scrubs per Week</span>"},
+        type: "indicator",
+        mode: "gauge+number"
+      }
+    ];
+    
+    var layout = { width: 400, height: 400, margin: { t: 0, b: 0 } };
+
+    Plotly.newPlot('guage', data, layout);
+  })
+}
