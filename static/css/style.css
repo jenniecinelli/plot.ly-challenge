@@ -1,0 +1,21 @@
+#header{
+  background-color: goldenrod;
+  color: white;
+}
+
+body{
+  color:goldenrod;
+}
+
+.well{
+  text-align: center;
+}
+
+#selDataset{
+  color: goldenrod;
+}
+
+.card{
+  margin-top:40px;
+  padding: 10px;
+}
