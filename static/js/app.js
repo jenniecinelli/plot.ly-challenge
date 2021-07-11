@@ -71,13 +71,13 @@ function metaData(a) {
       return meta.id.toString() === a;
   });
 
-  var metadataList = d3.select("#metadata")
+  var dataList = d3.select("#metadata")
 
-  metadataList.selectAll("p")
+  dataList.selectAll("p")
   .remove();
 
   Object.entries(metadata[0]).forEach(([key, value]) => {
-      metadataList.append("p")
+      dataList.append("p")
       .html(function(d)   {
       return `${key.toUpperCase()}: ${value}`;
     });
